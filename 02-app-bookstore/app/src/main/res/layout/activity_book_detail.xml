@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".bookdetail.BookDetailActivity">
+
+    <ImageView
+        android:id="@+id/bookCover"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/bookTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/bookCover"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        tools:text="The Lord of The Rings"
+        />
+
+    <TextView
+        android:id="@+id/bookAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        app:layout_constraintTop_toBottomOf="@id/bookTitle"
+        app:layout_constraintLeft_toLeftOf="@id/bookTitle"
+        tools:text="J.R.R Tolkien" />
+
+    <TextView
+        android:id="@+id/bookSummary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookAuthor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbars="vertical"
+        tools:text="@tools:sample/lorem/random" />
+
+</android.support.constraint.ConstraintLayout>
