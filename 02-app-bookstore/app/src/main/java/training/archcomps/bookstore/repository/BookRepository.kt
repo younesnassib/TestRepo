@@ -9,7 +9,7 @@ class BookRepository {
     private val constraints =  Constraints.Builder()
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
-
+//hola mi hermano
     fun syncBooksNow() {
         Timber.i("Synchronizing books now")
         val work = OneTimeWorkRequestBuilder<SyncRepositoryWorker>()
